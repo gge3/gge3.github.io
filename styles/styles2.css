@@ -87,7 +87,7 @@ main {
     position: relative;
     overflow-y: auto; /* Allow scrolling when content is too big */
     height: 100vh; /* Ensure main takes up the full viewport height */
-    background: url('./cscp.jpg') center/cover no-repeat; /* Set your background image */
+    background: url('/images/cscp.jpg') center/cover no-repeat; /* Set your background image */
     background-size: cover; /* Adjust as needed */
     background-position: center bottom;
     background-repeat: no-repeat;
