@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300;400;700&family=Syne:wght@400;700;800&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    font-family: 'Montserrat', sans-serif; /* Choose your preferred font */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Set your desired transparent background color */
+    padding: 10px;
+    z-index: 1000; /* Ensure header stays above other elements */
+    transition: background-color 0.4s ease; /* Smooth transition effect */
+}
+
+header:hover {
+    background-color: white;
+    transition: background-color 0.4s ease; /* Smooth transition effect */
+}
+
+
+
+header h1 {
+    justify-content: left;
+    margin: 0;
+    font-family: 'Syne', serif;
+    font-weight: 700;
+    color: white; /* Set your desired text color */
+    transition: color 0.4s ease;
+    padding: 10px;
+}
+
+header:hover h1{
+    color: black;
+}
+
+header:hover .button{
+    color: black;
+    border:1px solid black;
+    transition: color 0.4s ease;
+}
+header:hover .button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    /*background-color: rgba(0, 0, 0, 0.5); */
+    padding: 10px;
+}
+
+.button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 10px;
+    padding: 0.7em 2em 0.7em 2em;
+    /*background-color: #f9f9f9;*/
+    background-color: transparent;
+    color: white;
+    border:1px solid white;
+    cursor: pointer;
+    text-decoration:none;
+}
+
+.button:last-child {
+    margin-right: 0;
+}
+
+main {
+    position: relative;
+    overflow-y: auto; /* Allow scrolling when content is too big */
+    height: 100vh; /* Ensure main takes up the full viewport height */
+    background: url('./cscp.jpg') center/cover no-repeat; /* Set your background image */
+    background-size: cover; /* Adjust as needed */
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    /* animation: rotateBackground 60s linear infinite; */
+}
+
+/*
+@keyframes rotateBackground {
+  0%, 20% {
+    background: url('./cscp.jpg') center/cover no-repeat;
+  }
+  25%, 45% {
+    background: url('http://gren.works/wp-content/uploads/2024/01/cscp3-scaled.jpg') center/cover no-repeat;
+  }
+  50%, 70% {
+    background: url('http://gren.works/wp-content/uploads/2024/01/cscp2-scaled.jpg') center/cover no-repeat;
+  }
+  75%, 95% {
+    background: url('http://gren.works/wp-content/uploads/2024/01/cscp1-scaled.jpg') center/cover no-repeat;
+  }
+}
+*/
+
+.page-name {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: white; /* Set your desired text color */
+    /*background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for page name */
+    text-shadow: 0px 0px 19px rgba(0,0,0,0.86);
+}
+
+.page-name h2{
+    margin: 0;
+    font-size: 6vw;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+}
+
+.page-name p{
+    margin: 0 0 0 5px;
+}
+
+.page-name a{
+    text-decoration: none;
+    color: inherit;
+    mix-blend-mode: difference;
+}
+
+.page-name .arrows{
+    font-size: 2vw;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 0.6em;
+    animation: fadeInOut 3s infinite; /* 3s duration, infinite loop */
+    /* Delay animation for each span */
+}
+
+/* Keyframes for fadeInOut animation for the first span */
+@keyframes fadeInOut1 {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for fadeInOut animation for the second span */
+@keyframes fadeInOut2 {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for fadeInOut animation for the third span */
+@keyframes fadeInOut3 {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Apply different animations to each span */
+.page-name .arrows:nth-child(1) {
+    animation-name: fadeInOut1;
+    animation-delay: 0s;
+}
+
+.page-name .arrows:nth-child(2) {
+    animation-name: fadeInOut2;
+    animation-delay: 1s; /* Delay the second span by 1 second */
+}
+
+.page-name .arrows:nth-child(3) {
+    animation-name: fadeInOut3;
+    animation-delay: 2s; /* Delay the third span by 2 seconds */
+}
+
+/*============================================================================================================================*/
+
+@media (max-width: 768px) {
+    body .container{
+        overflow:scroll;
+    }
+
+    header h1{
+        writing-mode: vertical-rl;
+        font-size: 45px;
+    }
+
+    nav {
+        width: 100%;
+        flex-direction: column; /* Stack containers on top of each other */
+        align-items:stretch; /* Stretch containers to full width */
+        box-sizing: border-box;
+    }
+
+    .button {
+        margin:0 0 10px 0;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .page-name {
+    font-size: 2vw;
+    }
+
+    .page-name h2{
+
+        font-size: 7vw;
+
+    }
+}
+
+@media (max-width: 310px) {
+    .page-name .arrows{
+        display: none;
+    }
+
+}
