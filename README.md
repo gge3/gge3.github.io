@@ -1,4 +1,4 @@
-# gge3.github.io - Personal Portfolio
+# GREN.WORKS - Personal Portfolio
 
 Welcome to my GREN.WORKS. This site showcases my projects, skills, and professional experience. Built entirely with HTML and CSS. It's designed to be lightweight and fast.
 
