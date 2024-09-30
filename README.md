@@ -1,4 +1,4 @@
-# [username].github.io - Personal Portfolio
+# gge3.github.io - Personal Portfolio
 
 Welcome to my personal portfolio website hosted on GitHub Pages! This site showcases my projects, skills, and professional experience. Built entirely with HTML, CSS, and JavaScript, it's designed to be lightweight and fast.
 
