@@ -1,14 +1,6 @@
 # gge3.github.io - Personal Portfolio
 
-Welcome to my personal portfolio website hosted on GitHub Pages! This site showcases my projects, skills, and professional experience. Built entirely with HTML, CSS, and JavaScript, it's designed to be lightweight and fast.
-
-## 🚀 About the Site
-
-This portfolio website includes:
-- **Home Page**: A brief introduction about me, my skills, and areas of expertise.
-- **Projects**: A showcase of my past work, including web development, programming, and other relevant projects.
-- **Resume**: A downloadable copy of my CV/resume for potential employers or collaborators.
-- **Contact Page**: A way to reach out to me via email or social media platforms.
+Welcome to my GREN.WORKS. This site showcases my projects, skills, and professional experience. Built entirely with HTML and CSS. It's designed to be lightweight and fast.
 
 ### ✨ Features:
 - Responsive design that works on both desktop and mobile devices.
