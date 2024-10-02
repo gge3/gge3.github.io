@@ -194,6 +194,17 @@ main {
     animation-delay: 2s; /* Delay the third span by 2 seconds */
 }
 
+.fcont {
+    display: flex;
+}
+.under {
+    display: block;
+}
+
+.under a{
+    color: black;
+}
+
 /*============================================================================================================================*/
 
 @media (max-width: 768px) {
