@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW E34 Project Checklist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>TEST</h1>
+    
+    <div id="progress-container">
+      <label for="progress-bar">Progress: </label>
+      <progress id="progress-bar" value="0" max="100"></progress>
+    </div>
+
+    <h2>Tasks</h2>
+    <ul id="task-list"></ul>
+    
+    <h2>Add New Task</h2>
+    <form id="task-form">
+      <input type="text" id="task-title" placeholder="Task title" required>
+      <textarea id="task-desc" placeholder="Task description" required></textarea>
+      <button type="submit">Add Task</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

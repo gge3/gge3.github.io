@@ -1,0 +1,141 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #111d13; /* Very dark green for background */
+  color: #a1cca5; /* Light green for text */
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #415d43; /* Dark green for container */
+  padding: 20px;
+  border-radius: 0;
+  border: 1px solid #709775; /* Earthy green border */
+}
+
+h1, h2 {
+  color: #a1cca5; /* Light green */
+  margin-bottom: 10px;
+}
+
+#task-form {
+  margin-top: 20px;
+}
+
+#task-form input,
+#task-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #8fb996; /* Muted green */
+  color: #111d13; /* Dark green text */
+  border: 1px solid #709775; /* Earthy green border */
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #709775; /* Earthy green */
+  color: #111d13; /* Dark green text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8fb996; /* Muted green on hover */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #415d43; /* Dark green for task items */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #709775; /* Earthy green border */
+  border-radius: 0;
+}
+
+li.checked span {
+  text-decoration: line-through;
+  color: #8fb996; /* Muted green for completed tasks */
+}
+
+/* Custom Checkbox Button */
+.custom-checkbox {
+  background-color: #111d13; /* Dark green background */
+  border: 1px solid #415d43; /* Darker green border */
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 20px;
+  color: transparent;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-checkbox.checked {
+  background-color: #a1cca5; /* Light green for checked */
+  color: #111d13; /* Dark green for the check symbol */
+}
+
+.custom-checkbox:before {
+  content: '✔';
+}
+
+/* Progress Bar */
+progress {
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 50px; /* Rounded progress bar */
+  background-color: #8fb996; /* Muted green for background */
+  overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+  border-radius: 50px;
+  background-color: #8fb996;
+}
+
+progress::-webkit-progress-value {
+  border-radius: 50px; /* Rounded progress itself */
+  background-color: #709775; /* Earthy green for progress */
+  transition: background-color 0.3s ease;
+}
+
+progress::-moz-progress-bar {
+  border-radius: 50px;
+  background-color: #709775;
+}
+
+progress.complete::-webkit-progress-value {
+  background-color: #a1cca5; /* Light green when completed */
+}
+
+progress.complete::-moz-progress-bar {
+  background-color: #a1cca5;
+}
+
+#progress-container {
+  margin: 20px 0;
+}
