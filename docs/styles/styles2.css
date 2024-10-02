@@ -196,6 +196,7 @@ main {
 
 .fcont {
     display: flex;
+    font-size: 12px;
 }
 .under {
     display: block;
