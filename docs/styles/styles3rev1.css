@@ -166,10 +166,14 @@ div.under p{
 .fcont {
     display: flex;
     font-size: 12px;
-
+    
 }
 .under {
     display: block;
+}
+
+.under a{
+    color: black;
 }
 
 main.gallery{
