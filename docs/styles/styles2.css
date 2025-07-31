@@ -7,6 +7,7 @@
 
 
 body {
+    background-color: #B4061F;
     margin: 0;
     overflow: hidden; /* Prevent scrolling */
     font-family: 'Montserrat', sans-serif; /* Choose your preferred font */
@@ -84,32 +85,40 @@ nav {
 }
 
 main {
+
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
     position: relative;
     overflow-y: auto; /* Allow scrolling when content is too big */
     height: 100vh; /* Ensure main takes up the full viewport height */
-    background: url('/images/cscp.jpg') center/cover no-repeat; /* Set your background image */
-    background-size: cover; /* Adjust as needed */
+    background: url('../images/bg_01.png') center/cover no-repeat; 
+    background-size: contain;
     background-position: center bottom;
     background-repeat: no-repeat;
-    /* animation: rotateBackground 60s linear infinite; */
+     
 }
 
-/*
-@keyframes rotateBackground {
-  0%, 20% {
-    background: url('./cscp.jpg') center/cover no-repeat;
-  }
-  25%, 45% {
-    background: url('http://gren.works/wp-content/uploads/2024/01/cscp3-scaled.jpg') center/cover no-repeat;
-  }
-  50%, 70% {
-    background: url('http://gren.works/wp-content/uploads/2024/01/cscp2-scaled.jpg') center/cover no-repeat;
-  }
-  75%, 95% {
-    background: url('http://gren.works/wp-content/uploads/2024/01/cscp1-scaled.jpg') center/cover no-repeat;
-  }
+main.images-loaded {
+    opacity: 1;
+    animation: rotateBackground 60s linear infinite;
+        width: 100%;
+    
 }
-*/
+
+@keyframes rotateBackground {
+    0%, 20% {
+      background: url('../images/bg_01.png') center center/contain no-repeat;
+    }
+    25%, 45% {
+      background: url('../images/bg_02.png') center center/contain no-repeat;
+    }
+    50%, 70% {
+      background: url('../images/bg_03.png') center center/contain no-repeat;
+    }
+    75%, 95% {
+      background: url('../images/bg_04.png') center center/contain no-repeat;
+    }
+  }
 
 .page-name {
     position: fixed;
@@ -236,6 +245,24 @@ main {
         font-size: 7vw;
 
     }
+    main{
+        background: url('../images/bg_01_m.png') center/cover no-repeat;
+        background-size: contain;
+    }
+    @keyframes rotateBackground {
+        0%, 20% {
+          background: url('../images/bg_01_m.png') center center/contain no-repeat;
+        }
+        25%, 45% {
+          background: url('../images/bg_02_m.png') center center/contain no-repeat;
+        }
+        50%, 70% {
+          background: url('../images/bg_03_m.png') center center/contain no-repeat;
+        }
+        75%, 95% {
+          background: url('../images/bg_04_m.png') center center/contain no-repeat;
+        }
+      }
 }
 
 @media (max-width: 310px) {
