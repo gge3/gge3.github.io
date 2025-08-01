@@ -1,20 +1,20 @@
 # GREN.WORKS - Personal Portfolio
 
-Welcome to my GREN.WORKS. This site showcases my projects, skills, and professional experience. Built entirely with HTML and CSS. It's designed to be lightweight and fast.
+Welcome to my GREN.WORKS. This site showcases my projects, skills, and professional experience. Built entirely with HTML, CSS and JavaScript. It's designed to be lightweight and fast. It's also a testing ground.
 
 ### ✨ Features:
 - Responsive design that works on both desktop and mobile devices.
 - Simple and clean HTML/CSS for easy navigation.
-- Use of GitHub Pages to host the website with a custom domain (if applicable).
+- Use of GitHub Pages to host the website.
 
 ## 💻 Technologies Used
 
 - **HTML5**
 - **CSS3**
-- **JavaScript** (optional for interactivity or animations)
-- **GitHub Pages** for hosting
+- **JavaScript**
+- **GitHub Pages**
 
-## 📂 Project Structure
+## 📂 Project Structure (must update this smh)
 
 ```plaintext
 /
