@@ -1,0 +1,122 @@
+[
+  {
+    "model": "F2004",
+    "lapTime": "01:09.177",
+    "make": "Ferrari",
+    "year": 2004,
+    "power": "865 bhp",
+    "torque": "—",
+    "weight": "—",
+    "date": "21/06/2023",
+    "notes": "Fastest lap recorded with semislicks.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ferrari_F2004_front-left_2019_Hockenheim.jpg/320px-Ferrari_F2004_front-left_2019_Hockenheim.jpg",
+    
+    "resources": [
+      {
+        "label": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ferrari_F2004"
+      }
+    ]
+  },
+  {
+    "model": "McLaren P1 GTR",
+    "lapTime": "01:18.623",
+    "make": "McLaren",
+    "year": 2015,
+    "power": "986 bhp",
+    "torque": "—",
+    "weight": "1395 kg",
+    "date": "05/05/2024",
+    "notes": "Track-only variant. Incredible downforce.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/McLaren_P1_GTR_%2817210579406%29.jpg/320px-McLaren_P1_GTR_%2817210579406%29.jpg",
+    "resources": [
+      {
+        "label": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mazda_787B"
+      }
+    ]
+  },
+  {
+    "model": "Porsche 919 Hybrid Evo",
+    "lapTime": "01:10.342",
+    "make": "Porsche",
+    "year": 2018,
+    "power": "1160 bhp",
+    "torque": "—",
+    "weight": "849 kg",
+    "date": "10/07/2024",
+    "notes": "Unrestricted version of the 919 Hybrid.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Porsche_919_Hybrid_Evo.jpg/320px-Porsche_919_Hybrid_Evo.jpg",
+    "resources": [
+      {
+        "label": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/McLaren_F1#F1_LM"
+      }
+    ]
+  },
+  {
+    "model": "SF70H",
+    "lapTime": "01:12.759",
+    "make": "Ferrari",
+    "year": 2017,
+    "power": "--",
+    "torque": "--",
+    "weight": "--",
+    "date": "20/06/2023",
+    "notes": "Room for improvement",
+    "image": "",
+    "resources": []
+  },
+    {
+    "model": "F138",
+    "lapTime": "01:16.658",
+    "make": "Ferrari",
+    "year": 2013,
+    "power": "763 bhp",
+    "torque": "310 Nm",
+    "weight": "642 kg",
+    "date": "20/06/2023",
+    "notes": "Room for improvement",
+    "image": "",
+    "resources": []
+  },
+  {
+    "model": "Valkyrie AMR Pro 2022",
+    "lapTime": "01:18.631",
+    "make": "Aston Martin",
+    "year": 2022,
+    "power": "1000+ hp",
+    "torque": "--",
+    "weight": "--",
+    "date": "15/06/2023",
+    "notes": "Room for improvement",
+    "image": "",
+    "resources": []
+  },
+  {
+    "model": "R18 e-tron quattro 2014",
+    "lapTime": "01:18.834",
+    "make": "Audi",
+    "year": 2014,
+    "power": "700+ bhp",
+    "torque": "850+ Nm",
+    "weight": "915 kg",
+    "date": "19/06/2023",
+    "notes": "IMPROVE IT",
+    "image": "",
+    "resources": []
+  },
+  {
+    "model": "499P LMH 2023",
+    "lapTime": "01:20.194",
+    "make": "Ferrari",
+    "year": 2023,
+    "power": "600 hp",
+    "torque": "—",
+    "weight": "—",
+    "date": "11/11/2023",
+    "notes": "Can do 01:19 easily",
+    "image": "",
+    "resources": []
+  }
+]
