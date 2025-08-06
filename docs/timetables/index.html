@@ -24,15 +24,19 @@
           <th class="text-left px-4 py-2 cursor-pointer" data-sort="lapTime" data-key="lapTime">Lap Time</th>
           <th class="text-left px-4 py-2 cursor-pointer" data-sort="make" data-key="make">Brand</th>
           <th class="text-left px-4 py-2 cursor-pointer" data-sort="year" data-key="year">Year</th>
-          <th class="text-left px-4 py-2">Details</th>
+          <th class="text-right px-4 py-2">Details</th>
         </tr>
       </thead>
       <tbody id="car-table-body" class="text-white"></tbody>
     </table>
+    <div id="pagination" class="mt-4 flex justify-center space-x-2 text-white"></div>
+
   </div>
 
   <script>
-   const tbody = document.getElementById("car-table-body");
+  const rowsPerPage = 10;  // how many cars per page
+  let currentPage = 1;
+  const tbody = document.getElementById("car-table-body");
   const searchInput = document.getElementById("search-input");
   let allCars = [];
   let currentSort = { key: null, ascending: true };
@@ -47,7 +51,48 @@
   function updateTable() {
     let filtered = applyFilter(allCars);
     let sorted = applySort(filtered);
-    renderTable(sorted);
+    const totalPages = Math.ceil(sorted.length / rowsPerPage);
+    if (currentPage > totalPages) currentPage = totalPages || 1;
+
+    // Calculate slice indexes
+    const startIdx = (currentPage - 1) * rowsPerPage;
+    const endIdx = startIdx + rowsPerPage;
+    const pageItems = sorted.slice(startIdx, endIdx);
+
+    // Pass pairs with global index
+    const pageItemsWithIndex = pageItems.map((car, i) => ({car, globalIndex: startIdx + i}));
+
+    renderTable(pageItemsWithIndex);
+    renderPagination(totalPages);
+    updateSortIndicators()
+  }
+
+  function updateSortIndicators() {
+    document.querySelectorAll("th[data-sort]").forEach(th => {
+      const key = th.getAttribute("data-sort");
+      th.innerHTML = th.textContent.replace(/[\u25B2\u25BC]/g, '').trim(); // remove arrows
+      if (key === currentSort.key) {
+        th.innerHTML += currentSort.ascending ? " ▲" : " ▼";
+      }
+    });
+  }
+
+  function renderPagination(totalPages) {
+    const paginationDiv = document.getElementById('pagination');
+    paginationDiv.innerHTML = '';
+
+    if (totalPages <= 1) return;  // no pagination needed
+
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement('button');
+      btn.textContent = i;
+      btn.className = `px-3 py-1 rounded ${i === currentPage ? 'bg-blue-600' : 'bg-gray-700 hover:bg-gray-600'}`;
+      btn.addEventListener('click', () => {
+        currentPage = i;
+        updateTable();
+      });
+      paginationDiv.appendChild(btn);
+    }
   }
 
   function applyFilter(cars) {
@@ -89,10 +134,12 @@
     });
   }
 
-  function renderTable(cars) {
+  function renderTable(carsWithIndex) {
     tbody.innerHTML = "";
-    cars.forEach((car, index) => {
-      const rowId = `details-${index}`;
+    carsWithIndex.forEach(({car,globalIndex}) => {
+    //cars.forEach((car, index) => {
+      const rowId = `details-${globalIndex}`;
+      const res = car.resources || {};
       tbody.innerHTML += `
         <tr class="bg-gray-900/80 hover:bg-blue-600/20 transition-all duration-200 shadow-md rounded-lg overflow-hidden cursor-pointer border border-gray-700" onclick="toggleDetails('${rowId}')">
           <td class="px-4 py-3 tracking-wide text-white text-sm">${car.model}</td>
@@ -113,9 +160,9 @@
                 <div><span class="font-semibold">Notes:</span> ${car.notes}</div>
                 <div><span class="font-semibold">Resources:</span>
                   <ul class="list-disc list-inside">
-                    <li><a href="${car.resources.specs}" class="text-blue-600 hover:underline">Official Specs</a></li>
-                    <li><a href="${car.resources.onboard}" class="text-blue-600 hover:underline">Onboard Lap</a></li>
-                    <li><a href="${car.resources.mod}" class="text-blue-600 hover:underline">Car Mod Page</a></li>
+                    <li><a href="${res.specs || '#'}" class="text-blue-600 hover:underline">Official Specs</a></li>
+                    <li><a href="${res.onboard || '#'}" class="text-blue-600 hover:underline">Onboard Lap</a></li>
+                    <li><a href="${res.mod || '#'}" class="text-blue-600 hover:underline">Car Mod Page</a></li>
                   </ul>
                 </div>
               </div>
@@ -130,9 +177,12 @@
     document.getElementById(id).classList.toggle("hidden");
   }
 
-  searchInput.addEventListener("input", updateTable);
+  searchInput.addEventListener("input", () => {
+    currentPage = 1; // reset to first page on search
+    updateTable();
+  });
 
-  // Sorting
+    // Sorting
   document.querySelectorAll("th[data-sort]").forEach(th => {
     th.addEventListener("click", () => {
       const key = th.getAttribute("data-sort");
